@@ -37,11 +37,3 @@ db.grupos.insertMany([
 {grupo:"The Pillows",integrantes:["Sawao Yamanaka","Yoshiaki Manabe","Shinichirou Sato"],fechainicio: new Date("01-03-1989"),añosactivo:32,activo:true,pais:"Japon",genero:["Rock","Rock alternativo"],cancion:{nombre:"Last Dinosaur",duracion:3.55}},
 ])
 
-db.grupos.find({
-    $and:
-    [
-        {genero:{$in: ["Hard Rock","Heavy Metal"] } },
-        {añosactivo:{$gt:30}},
-    ]
-}).pretty
-db.grupos.count()
